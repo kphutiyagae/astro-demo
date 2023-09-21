@@ -2,18 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
 import { Image } from 'astro:assets';
+import CustomCard from '../components/CustomCard.astro';
 ---
 
 <Layout title="InfiniteXP Blog">
     <Main>
         <h1 transition:animate="slide" class="">InfiniteXP Blog</h1>
-        <a href="/gameInfo">To Game Info</a>
-        <div class="bg-gray-100 flex justify-between pointer cursor-pointer rounded-md overflow-hidden">
-            <div class=" w-full flex flex-col  justify-center">
-                <p class="text-3xl font-bold w-full py-6 px-8">God Of War : Ragnarok</p>
-                <p class="text-xl font-semibold w-full py-2 px-8">Rating: 4.5/5</p>
-            </div>
-            <Image src="/gow-poster.png" alt="A bird." width="800" height="600"/>
-        </div>
+        <CustomCard imageUrl='/gow-poster.png' href='/gameInfo' styles="shadow-md flex justify-between pointer cursor-pointer rounded-md overflow-hidden" title='God Of War : Ragnarok' body='Rating: 4.5/5'>
+       </div>
     </Main>
 </Layout>
