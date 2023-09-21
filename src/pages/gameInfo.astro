@@ -1,9 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
+
+interface Props {
+    title?: string;
+}
+
+const { 
+	title = "Game",
+} = Astro.props;
 ---
 
-<Layout title="Game Info InfiniteXP Blog">
+<Layout title={title}>
     <Main>
         <h1 transition:animate="fade" class="">Game Info InfiniteXP Blog</h1>
         <div>Hello</div>
