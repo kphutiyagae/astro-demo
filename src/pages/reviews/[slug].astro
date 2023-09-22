@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../components/Main.astro";
+import { Image } from 'astro:assets';
+
+export const getStaticPaths = (async () => {
+    const posts = await getCollection("posts");
+
+    const paths = posts.map(post => {
+        return { 
+            params: {
+            slug: post.slug
+        },
+        props: { post }
+        }
+    })
+
+    return paths;
+})
+
+type Props = {
+    post: CollectionEntry<"posts">
+}
+
+const {post} = Astro.props
+---
+
+<Layout title={post.data.title}>
+    <Main>
+        <h1 class="my-8 text-4xl font-bold">{post.data.title}</h1>
+        <div class="flex justify-center items-center py-8">
+            <Image transition:name="image" format="webp" src={post.data.image} alt="Game card image" width="1024" height="616"/>
+        </div>
+        <div class="flex flex-col">
+            <div class="py-6">
+                <p>Rating: 4.5 / 5</p>
+            </div>
+            <div>
+                <p>Hello</p>
+
+                <p class="my-8">Obcaecati quasi dignissimos, incidunt itaque, consequatur voluptates accusantium laboriosam accusamus officiis aliquam dicta necessitatibus eos minus veritatis recusandae. Incidunt cum quibusdam quae ipsam natus dolor quasi odit quia nisi tempore?
+                Iste, quam saepe iusto dolorum recusandae modi atque aspernatur veniam, numquam tempore nulla ex? Provident vel dignissimos nostrum eligendi, atque voluptatem. Dolores, possimus non cum culpa laudantium minima soluta consequatur.
+                Ut eveniet, itaque quia natus qui explicabo, sequi quam quaerat mollitia eos accusantium nulla ipsam odit cupiditate iste voluptate. Est, omnis. Molestias libero dignissimos aliquam animi eaque perspiciatis, dicta mollitia!</p>
+            </div>
+        </div>
+    </Main>
+</Layout>
