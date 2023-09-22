@@ -25,6 +25,7 @@ type Props = {
 }
 
 const {post} = Astro.props
+const {Content} = await post.render();
 ---
 
 <Layout title={post.data.title}>
@@ -38,11 +39,7 @@ const {post} = Astro.props
                 <p>Rating: 4.5 / 5</p>
             </div>
             <div>
-                <p>Hello</p>
-
-                <p class="my-8">Obcaecati quasi dignissimos, incidunt itaque, consequatur voluptates accusantium laboriosam accusamus officiis aliquam dicta necessitatibus eos minus veritatis recusandae. Incidunt cum quibusdam quae ipsam natus dolor quasi odit quia nisi tempore?
-                Iste, quam saepe iusto dolorum recusandae modi atque aspernatur veniam, numquam tempore nulla ex? Provident vel dignissimos nostrum eligendi, atque voluptatem. Dolores, possimus non cum culpa laudantium minima soluta consequatur.
-                Ut eveniet, itaque quia natus qui explicabo, sequi quam quaerat mollitia eos accusantium nulla ipsam odit cupiditate iste voluptate. Est, omnis. Molestias libero dignissimos aliquam animi eaque perspiciatis, dicta mollitia!</p>
+            <Content/>
             </div>
         </div>
     </Main>
