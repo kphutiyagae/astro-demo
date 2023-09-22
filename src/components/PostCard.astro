@@ -13,7 +13,7 @@ console.log(post.data.title)
 
 <article>
     <a href=`/reviews/${post.slug}`>
-        <div class="flex rounded-lg shadow-md overflow-hidden hover:scale-105 hover:bg-slate-50 hover:shadow-red-200 transition duration-200 ease-in-out">
+        <div class="flex rounded-lg shadow-sm overflow-hidden hover:scale-105 hover:bg-slate-50 hover:my-8 hover:shadow-red-200 transition duration-200 ease-in-out">
             <Image format="webp" class='mb-6 aspect-thumbnail object-cover' transition:name="image" src={post.data.image} alt=`thumbnail for ${post.data.title}` width="800" height={800 / 1.5}/>
             <div class="w-full h-auto flex flex-col justify-center">
                 <h2 class="text-3xl mx-8">{post.data.title}</h2>
