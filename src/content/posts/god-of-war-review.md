@@ -2,7 +2,7 @@
 author: kopano
 categories: ["playstation", "action"]
 date: 21/09/2023
-image: /gow-poster.png
+image: ./images/gow-poster.png
 title: Blood, Bones and Boy! - The Ragnarok Review
 descritption: Just when you thought you seen it all, Kratos is the voice of reason!
 ---

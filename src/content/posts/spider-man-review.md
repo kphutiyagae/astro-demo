@@ -2,7 +2,7 @@
 author: kopano
 categories: ["playstation", "action"]
 date: 20/09/2023
-image: /spider-man-poster.jpg
+image: ./images/spider-man-poster.jpg
 title: Godspeed, Spiderman!
 descritption: The good, the bad and the ugly collide in this thrilling sequel
 ---

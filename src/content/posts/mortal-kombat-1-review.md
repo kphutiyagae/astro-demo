@@ -2,7 +2,7 @@
 author: kopano
 categories: ["playstation", "action"]
 date: 21/09/2023
-image: /mortal-kombat-poster.jpg
+image: ./images/mortal-kombat-poster.jpg
 title: More guts than a Beserk Manga
 descritption: Hulk Button-mash! - This time, no property damage was incurred.
 ---

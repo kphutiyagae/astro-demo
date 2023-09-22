@@ -2,7 +2,7 @@
 author: kopano
 categories: ["playstation", "action"]
 date: 21/09/2023
-image: /cyberpunk-poster.png
+image: ./images/cyberpunk-poster.png
 title: The future is now old man!
 descritption: Flashing lights and not the Kanye West kind!
 ---
